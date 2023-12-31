@@ -1,7 +1,3 @@
-Certainly! Below is a template for a README file for a portfolio website that utilizes HTML, CSS, and JavaScript with a creative carousel effect.
-
----
-
 # Portfolio Website
 
 Welcome to my portfolio website! This website showcases my projects, skills, and experiences. It is built using HTML, CSS, and JavaScript, with a creative carousel effect to enhance the visual appeal.
@@ -61,7 +57,3 @@ This project is licensed under the [Your License] - see the [LICENSE](LICENSE) f
 
 - Aryan Srivastava
 - Email: [your.email@example.com]
-
----
-
-Feel free to customize this README template based on your project specifics. Replace placeholders like "your-username," "Your License," "Your Name," and provide the actual links and information. Additionally, consider adding a `CONTRIBUTING.md` file if you want to encourage contributions to your portfolio.
