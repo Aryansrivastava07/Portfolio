@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="../css/style_exp.css">
+    <link rel="stylesheet" href="../css/res_exp.css">
+    <!-- <link rel="stylesheet" href="css/res.css"> -->
+</head>
+
+<body class="body">
+    <cursor class="cursor">
+    </cursor>
+    <div class="cursor_folower"></div>
+    <nav class="nav">
+        <p class="line"> Aryan Srivastava </p>
+        <label for="hambuger" class="hamburger">
+            <input type="checkbox" name="hamburger" class="check" id="checkbox">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </label>
+        <div class="navbar">
+            <p onclick="active(0) ">About Me</p>
+            <p onclick="active(1) ">Skills</p>
+            <p onclick="active(2) ">Projects</p>
+            <p onclick="active(3) ">Contact me</p>
+            <p>Resume</p>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="arrow left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 11" id="btn" class="arrow_left">
+                <path
+                    d="M1.08 5.03a19.07 19.07 0 007.07-2.8c.92-.6 1.82-1.23 2.6-2.01.68-.68 1.74.38 1.06 1.06a21.53 21.53 0 01-4.98 3.4c7.04.45 14.09.69 21.15.55 6.74-.13 13.48-.5 20.22-.66 5.36-.12 10.72-.13 16.08-.07.96.01.96 1.51 0 1.5-8.5-.1-17 .05-25.5.38-6.62.25-13.23.48-19.86.35-3.47-.07-6.93-.23-10.4-.43 1.7.65 3.28 1.6 4.4 3.07.25.33.05.84-.27 1.03-.38.23-.78.05-1.02-.27-1.46-1.9-4.05-2.72-6.3-3.18-1.32-.27-2.7-.45-4.05-.45-.82 0-1.06-1.33-.2-1.47"
+                    fill="#000" fill-rule="evenodd"></path>
+            </svg>
+        </div>
+        <div class="content">
+            <div class="page home_page" id="page1" data-value="active" onclick="active(0) ">
+                <div class="img">
+                    <img src="../assets/title.webp" alt="my image">
+                </div>
+                <div class="intro">
+                    <h2>Hi ,<p class="line">I am <br class="br">Aryan Srivastava</p>
+                    </h2>
+                    <div class="status">
+                        <p>I am a </p>
+                        <p class="status_text ">
+                            <span class="status_tt line">web developer</span>
+                            <span class="status_tt line">web Enthusiast</span>
+                            <span class="status_tt line">Software Developer</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="skill_page page" data-value="after_active" onclick="active(1) ">
+                <h2 class="line">MY SKILLS</h2>
+                <div class="skill_content ">
+                    <div class="skill_card">
+                        <div class="front">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png">
+                        </div>
+                        <div class="back">HTML</div>
+                    </div>
+                    <div class="skill_card">
+                        <div class="front">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png">
+                        </div>
+                        <div class="back">CSS</div>
+                    </div>
+                    <div class="skill_card">
+                        <div class="front">
+                            <img
+                                src="data:image/png;base64,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">
+                        </div>
+                        <div class="back">Javascript</div>
+                    </div>
+                    <div class="skill_card">
+                        <div class="front">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png">
+                        </div>
+                        <div class="back">C</div>
+                    </div>
+                </div>
+                <div class="trail">
+                    <li>
+                        <hr size="3px" color="#464646" width="100%">
+                        <ul><p> 2019 </p>
+                            <div class="baloon">
+                                <h3>November </h3>Graduation in Btech CSE <br>GL BAJAJ INSTITUTE OF TECHNOLOGY
+                                AND MANAGEMENT
+                            </div>
+                        </ul>
+                        <ul><p>2021</p> <div class="baloon"></div>
+                        </ul>
+                        <ul><p>2022</p> <div class="baloon"></div>
+                        </ul>
+                        <ul><p>2022</p> <div class="baloon"></div>
+                        </ul>
+                        <ul><p>2023</p> <div class="baloon"></div>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+            <div class="project_page page" data-value="inactive" onclick="active(2) ">
+                <h2 class="line">MY PROJECTS</h2>
+                <div class="project_con">
+                    <div>
+                        <div class="front">
+                            <img src="../assets/Screenshot 2023-08-27 235626.png" alt="A shape purely made of HTML,CSS"
+                                title="A shape purely made of HTML,CSS">
+                        </div>
+                        <div class="back">
+                            A shape purely made of HTML,CSS.<br><b>Project link : </b> <a
+                                href="https://aryansrivastava07.github.io/homepage/"
+                                target="blank">https://aryansrivastava07.github.io/A/</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="front">
+                            <img src="../assets/landing_page.webp" alt="A page made for use in the place of new tab of browsers"
+                                title="A page made for use in the place of new tab of browsers">
+                        </div>
+                        <div class="back">
+                            A page made for use in the place of new tab of browsers with the
+                            help of HTML, CSS, JS.<br><b>Project link:</b> <a
+                                href="https://aryansrivastava07.github.io/homepage/"
+                                target="blank">https://aryansrivastava07.github.io/homepage/</a>
+                        </div>
+                    </div>
+                    <!--
+                     <div>
+                        <div class="front">
+                            Project3
+                        </div>
+                        <div class="back">
+                            
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="front">
+                            Project4
+                        </div>
+                        <div class="back">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="front">
+                            Project5
+                        </div>
+                        <div class="back">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="front">
+                            Project6
+                        </div>
+                        <div class="back">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="contact_page page" data-value="before_active" onclick="active(3) ">
+                <h2 class="line">CONTACT ME</h2>
+                <div class="contact_con">
+                    <form action="#" autocomplete="off" target="_top" class="form">
+                        <h3>Share your review / query here :</h3>
+                        <label for="name" class="label"> Name :</label><input type="text" placeholder="Name"
+                            class="input name" required autocomplete="no">
+                        <label for="email" class="label"> Email id :</label><input type="email" placeholder="Email"
+                            class="input email" required autocomplete="no">
+                        <label for="number" class="label"> Contact number :</label><input type="tel"
+                            placeholder="contact number" pattern="[0-9]{10}" class="input number" autocomplete="no">
+                        <label for="query" class="label"> Query/Review : </label><input type="message"
+                            placeholder="Query/Review" class="input message" minlength="20" required
+                            autocomplete="no"></textarea>
+                        <div>
+                            <button type="reset" class="submit reset"><img src="../assets/reset.png" height="20px" alt="reset"
+                                    title="reset"></button>
+                            <input type="submit" value="SUBMIT" class="submit" onclick="data()">
+                        </div>
+                    </form>
+                    <div class="social">
+                        <h4>Follow me on - </h4>
+                        <div class="media_icon">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="instagram">
+                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="facebook">
+                            <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="Twitter(X)">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2504/2504923.png" alt="Linkedin">
+                        </div>
+                        <h4>Have a chat with me - </h4>
+                        <div class="chat">
+                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png" alt="Whatsapp">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png" alt="Telegram">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="arrow right" style="rotate: 180deg;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 11"
+                id="btn" class="arrow_right">
+                <path
+                    d="M1.08 5.03a19.07 19.07 0 007.07-2.8c.92-.6 1.82-1.23 2.6-2.01.68-.68 1.74.38 1.06 1.06a21.53 21.53 0 01-4.98 3.4c7.04.45 14.09.69 21.15.55 6.74-.13 13.48-.5 20.22-.66 5.36-.12 10.72-.13 16.08-.07.96.01.96 1.51 0 1.5-8.5-.1-17 .05-25.5.38-6.62.25-13.23.48-19.86.35-3.47-.07-6.93-.23-10.4-.43 1.7.65 3.28 1.6 4.4 3.07.25.33.05.84-.27 1.03-.38.23-.78.05-1.02-.27-1.46-1.9-4.05-2.72-6.3-3.18-1.32-.27-2.7-.45-4.05-.45-.82 0-1.06-1.33-.2-1.47"
+                    fill="#000" fill-rule="evenodd"></path>
+            </svg>
+        </div>
+    </div>
+    <footer>
+        Made by Aryan Srivastava
+    </footer>
+</body>
+<script src="../js/script_exp.js"></script>
+</html>
