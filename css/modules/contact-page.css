@@ -1,0 +1,238 @@
+/* ===================================
+   CONTACT PAGE MODULE
+   ===================================
+   
+   This module contains:
+   - Contact page layout and grid system
+   - Contact form with glassmorphism effects
+   - Social media section
+   - Input field styling and interactions
+   - Button hover effects
+*/
+
+/* Enhanced Contact Me Page Styling */
+.contact_page {
+  overflow-y: auto;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.contact_con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 1em auto;
+}
+
+.form {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.form h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.label {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+  /* letter-spacing: 0.8px; */
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(99, 102, 241, 0.08);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.15);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+.message {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.form > div {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.submit {
+  padding: 0.8rem 1.5rem;
+  background: rgba(99, 102, 241, 0.8);
+  border: 1px solid rgba(99, 102, 241, 0.5);
+  border-radius: 8px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit:hover {
+  background: rgba(99, 102, 241, 1);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.reset {
+  background: rgba(239, 68, 68, 0.8);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  min-width: auto;
+}
+
+.reset:hover {
+  background: rgba(239, 68, 68, 1);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.social {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.social h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.media_icon {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.media_icon img {
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.media_icon img:hover {
+  transform: translateY(-2px);
+  background: rgba(99, 102, 241, 0.15);
+}
+.chat {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.chat img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Responsive Design for Contact Page */
+@media (max-width: 768px) {
+  .contact_con {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+
+  .form,
+  .social {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact_page {
+    padding: 1rem 0.5rem;
+  }
+
+  .contact_con {
+    gap: 1.5rem;
+  }
+
+  .form,
+  .social {
+    padding: 1.5rem;
+  }
+
+  .form h3 {
+    font-size: 1.2rem;
+  }
+
+  .input {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .submit {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .media_icon {
+    gap: 1rem;
+  }
+
+  .media_icon img {
+    width: 35px;
+    height: 35px;
+  }
+}

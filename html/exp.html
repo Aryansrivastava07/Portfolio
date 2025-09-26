@@ -1,221 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
-    <link rel="stylesheet" href="../css/style_exp.css">
-    <link rel="stylesheet" href="../css/res_exp.css">
-    <!-- <link rel="stylesheet" href="css/res.css"> -->
-</head>
+    <!-- Modular CSS Architecture -->
+    <link rel="stylesheet" href="../css/enhanced-modular.css" />
 
-<body class="body">
-    <cursor class="cursor">
-    </cursor>
+    <!-- <link rel="stylesheet" href="css/res.css"> -->
+  </head>
+
+  <body class="body">
+    <cursor class="cursor"> </cursor>
     <div class="cursor_folower"></div>
-    <nav class="nav">
-        <p class="line"> Aryan Srivastava </p>
+    <section class="section">
+      <nav class="nav">
+        <p class="line">Aryan Srivastava</p>
         <label for="hambuger" class="hamburger">
-            <input type="checkbox" name="hamburger" class="check" id="checkbox">
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-            <div class="line-3"></div>
+          <input type="checkbox" name="hamburger" class="check" id="checkbox" />
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
         </label>
         <div class="navbar">
-            <p onclick="active(0) ">About Me</p>
-            <p onclick="active(1) ">Skills</p>
-            <p onclick="active(2) ">Projects</p>
-            <p onclick="active(3) ">Contact me</p>
-            <p>Resume</p>
+          <p onclick="active(0) ">About Me</p>
+          <p onclick="active(1) ">Skills</p>
+          <p onclick="active(2) ">History</p>
+          <p onclick="active(3) ">Projects</p>
+          <p onclick="active(4) ">Contact me</p>
+          <p>Resume</p>
         </div>
-    </nav>
-    <div class="container">
-        <div class="arrow left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 11" id="btn" class="arrow_left">
-                <path
-                    d="M1.08 5.03a19.07 19.07 0 007.07-2.8c.92-.6 1.82-1.23 2.6-2.01.68-.68 1.74.38 1.06 1.06a21.53 21.53 0 01-4.98 3.4c7.04.45 14.09.69 21.15.55 6.74-.13 13.48-.5 20.22-.66 5.36-.12 10.72-.13 16.08-.07.96.01.96 1.51 0 1.5-8.5-.1-17 .05-25.5.38-6.62.25-13.23.48-19.86.35-3.47-.07-6.93-.23-10.4-.43 1.7.65 3.28 1.6 4.4 3.07.25.33.05.84-.27 1.03-.38.23-.78.05-1.02-.27-1.46-1.9-4.05-2.72-6.3-3.18-1.32-.27-2.7-.45-4.05-.45-.82 0-1.06-1.33-.2-1.47"
-                    fill="#000" fill-rule="evenodd"></path>
-            </svg>
+      </nav>
+      <div class="container">
+        <div class="arrow left">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 65 11"
+            id="btn"
+            class="arrow_left"
+          >
+            <path
+              d="M1.08 5.03a19.07 19.07 0 007.07-2.8c.92-.6 1.82-1.23 2.6-2.01.68-.68 1.74.38 1.06 1.06a21.53 21.53 0 01-4.98 3.4c7.04.45 14.09.69 21.15.55 6.74-.13 13.48-.5 20.22-.66 5.36-.12 10.72-.13 16.08-.07.96.01.96 1.51 0 1.5-8.5-.1-17 .05-25.5.38-6.62.25-13.23.48-19.86.35-3.47-.07-6.93-.23-10.4-.43 1.7.65 3.28 1.6 4.4 3.07.25.33.05.84-.27 1.03-.38.23-.78.05-1.02-.27-1.46-1.9-4.05-2.72-6.3-3.18-1.32-.27-2.7-.45-4.05-.45-.82 0-1.06-1.33-.2-1.47"
+              fill="#000"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
         </div>
         <div class="content">
-            <div class="page home_page" id="page1" data-value="active" onclick="active(0) ">
-                <div class="img">
-                    <img src="../assets/title.webp" alt="my image">
-                </div>
-                <div class="intro">
-                    <h2>Hi ,<p class="line">I am <br class="br">Aryan Srivastava</p>
-                    </h2>
-                    <div class="status">
-                        <p>I am a </p>
-                        <p class="status_text ">
-                            <span class="status_tt line">web developer</span>
-                            <span class="status_tt line">web Enthusiast</span>
-                            <span class="status_tt line">Software Developer</span>
-                        </p>
-                    </div>
-                </div>
+          <div
+            class="page home_page"
+            id="page1"
+            data-value="active"
+            onclick="active(0)"
+          >
+            <div class="img">
+              <img src="../assets/title.webp" alt="my image" />
             </div>
-            <div class="skill_page page" data-value="after_active" onclick="active(1) ">
-                <h2 class="line">MY SKILLS</h2>
-                <div class="skill_content ">
-                    <div class="skill_card">
-                        <div class="front">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png">
-                        </div>
-                        <div class="back">HTML</div>
-                    </div>
-                    <div class="skill_card">
-                        <div class="front">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png">
-                        </div>
-                        <div class="back">CSS</div>
-                    </div>
-                    <div class="skill_card">
-                        <div class="front">
-                            <img
-                                src="data:image/png;base64,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">
-                        </div>
-                        <div class="back">Javascript</div>
-                    </div>
-                    <div class="skill_card">
-                        <div class="front">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png">
-                        </div>
-                        <div class="back">C</div>
-                    </div>
-                </div>
-                <div class="trail">
-                    <li>
-                        <hr size="3px" color="#464646" width="100%">
-                        <ul><p> 2019 </p>
-                            <div class="baloon">
-                                <h3>November </h3>Graduation in Btech CSE <br>GL BAJAJ INSTITUTE OF TECHNOLOGY
-                                AND MANAGEMENT
-                            </div>
-                        </ul>
-                        <ul><p>2021</p> <div class="baloon"></div>
-                        </ul>
-                        <ul><p>2022</p> <div class="baloon"></div>
-                        </ul>
-                        <ul><p>2022</p> <div class="baloon"></div>
-                        </ul>
-                        <ul><p>2023</p> <div class="baloon"></div>
-                        </ul>
-                    </li>
-                </div>
+            <div class="intro">
+              <h2>
+                Hi ,
+                <p class="">I am <br class="br" />Aryan Srivastava</p>
+              </h2>
+              <div class="status">
+                <p>I am a</p>
+                <p class="status_text">
+                  <span class="status_tt line">web developer</span>
+                  <span class="status_tt line">web Enthusiast</span>
+                  <span class="status_tt line">Software Developer</span>
+                </p>
+              </div>
             </div>
-            <div class="project_page page" data-value="inactive" onclick="active(2) ">
-                <h2 class="line">MY PROJECTS</h2>
-                <div class="project_con">
-                    <div>
-                        <div class="front">
-                            <img src="../assets/Screenshot 2023-08-27 235626.png" alt="A shape purely made of HTML,CSS"
-                                title="A shape purely made of HTML,CSS">
-                        </div>
-                        <div class="back">
-                            A shape purely made of HTML,CSS.<br><b>Project link : </b> <a
-                                href="https://aryansrivastava07.github.io/homepage/"
-                                target="blank">https://aryansrivastava07.github.io/A/</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="front">
-                            <img src="../assets/landing_page.webp" alt="A page made for use in the place of new tab of browsers"
-                                title="A page made for use in the place of new tab of browsers">
-                        </div>
-                        <div class="back">
-                            A page made for use in the place of new tab of browsers with the
-                            help of HTML, CSS, JS.<br><b>Project link:</b> <a
-                                href="https://aryansrivastava07.github.io/homepage/"
-                                target="blank">https://aryansrivastava07.github.io/homepage/</a>
-                        </div>
-                    </div>
-                    <!--
-                     <div>
-                        <div class="front">
-                            Project3
-                        </div>
-                        <div class="back">
-                            
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <div class="front">
-                            Project4
-                        </div>
-                        <div class="back">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="front">
-                            Project5
-                        </div>
-                        <div class="back">
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <div class="front">
-                            Project6
-                        </div>
-                        <div class="back">
-                        </div>
-                    </div> -->
+          </div>
+          <div
+            class="skill_page page"
+            data-value="after_active"
+            onclick="active(1) "
+          >
+            <h2 class="line">MY SKILLS</h2>
+            <div class="skill_content">
+              <div class="skill_card">
+                <div class="front">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+                  />
                 </div>
-            </div>
-            <div class="contact_page page" data-value="before_active" onclick="active(3) ">
-                <h2 class="line">CONTACT ME</h2>
-                <div class="contact_con">
-                    <form action="#" autocomplete="off" target="_top" class="form">
-                        <h3>Share your review / query here :</h3>
-                        <label for="name" class="label"> Name :</label><input type="text" placeholder="Name"
-                            class="input name" required autocomplete="no">
-                        <label for="email" class="label"> Email id :</label><input type="email" placeholder="Email"
-                            class="input email" required autocomplete="no">
-                        <label for="number" class="label"> Contact number :</label><input type="tel"
-                            placeholder="contact number" pattern="[0-9]{10}" class="input number" autocomplete="no">
-                        <label for="query" class="label"> Query/Review : </label><input type="message"
-                            placeholder="Query/Review" class="input message" minlength="20" required
-                            autocomplete="no"></textarea>
-                        <div>
-                            <button type="reset" class="submit reset"><img src="../assets/reset.png" height="20px" alt="reset"
-                                    title="reset"></button>
-                            <input type="submit" value="SUBMIT" class="submit" onclick="data()">
-                        </div>
-                    </form>
-                    <div class="social">
-                        <h4>Follow me on - </h4>
-                        <div class="media_icon">
-                            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="instagram">
-                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="facebook">
-                            <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="Twitter(X)">
-                            <img src="https://cdn-icons-png.flaticon.com/128/2504/2504923.png" alt="Linkedin">
-                        </div>
-                        <h4>Have a chat with me - </h4>
-                        <div class="chat">
-                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png" alt="Whatsapp">
-                            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png" alt="Telegram">
-                        </div>
-                    </div>
+                <div class="back">HTML</div>
+              </div>
+              <div class="skill_card">
+                <div class="front">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                  />
                 </div>
+                <div class="back">CSS</div>
+              </div>
+              <div class="skill_card">
+                <div class="front">
+                  <img
+                    src="data:image/png;base64,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"
+                  />
+                </div>
+                <div class="back">Javascript</div>
+              </div>
+              <div class="skill_card">
+                <div class="front">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png"
+                  />
+                </div>
+                <div class="back">C</div>
+              </div>
             </div>
+          </div>
+          <div
+            class="history_page page"
+            data-value="inactive"
+            onclick="active(2) "
+          >
+            <h2 class="line">MY JOURNEY</h2>
+            <div class="timeline-container">
+              <button
+                class="timeline-scroll-btn timeline-scroll-left"
+                onclick="scrollTimeline('left')"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 18L9 12L15 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="trail" id="timeline-trail">
+                <div class="timeline-item">
+                  <div class="baloon" onclick="toggleStraight(this)">
+                    <h3>November 2019</h3>
+                    Started B.Tech CSE at GL Bajaj Institute of Technology and
+                    Management. Began my journey into computer science and
+                    programming fundamentals.
+                  </div>
+                  <div class="year-pill">2019</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="baloon" onclick="toggleStraight(this)">
+                    <h3>March 2020</h3>
+                    Learned HTML, CSS, and JavaScript basics during the
+                    pandemic. Built my first responsive website and discovered
+                    my passion for web development.
+                  </div>
+                  <div class="year-pill">2020</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="baloon" onclick="toggleStraight(this)">
+                    <h3>August 2021</h3>
+                    Completed internship as Frontend Developer. Worked on
+                    real-world projects using React.js and modern CSS
+                    frameworks.
+                  </div>
+                  <div class="year-pill">2021</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="baloon" onclick="toggleStraight(this)">
+                    <h3>June 2022</h3>
+                    Developed multiple portfolio projects including AI quiz
+                    platform and photography website. Mastered advanced
+                    JavaScript concepts and API integration.
+                  </div>
+                  <div class="year-pill">2022</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="baloon" onclick="toggleStraight(this)">
+                    <h3>Present</h3>
+                    Graduated with B.Tech degree and actively seeking
+                    opportunities as a Full Stack Developer. Continuously
+                    learning new technologies and building innovative projects.
+                  </div>
+                  <div class="year-pill">2023</div>
+                </div>
+              </div>
+              <button
+                class="timeline-scroll-btn timeline-scroll-right"
+                onclick="scrollTimeline('right')"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18L15 12L9 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="project_page page"
+            data-value="inactive"
+            onclick="active(3) "
+          >
+            <h2 class="line">MY PROJECTS</h2>
+            <div class="project_container">
+              <div data-value="" onclick="openProjectPopup(1)">
+                <div class="project" id="project_1">
+                  <img
+                    src="../assets/clock.png"
+                    alt="CSS Clock Design"
+                    title="CSS Clock Design"
+                  />
+                  <div class="title">CSS Clock</div>
+                </div>
+              </div>
+              <div data-value="" onclick="openProjectPopup(2)">
+                <div class="project" id="project_2">
+                  <img
+                    src="../assets/quizzify.png"
+                    alt="Quizzify AI Platform"
+                    title="Quizzify AI Platform"
+                  />
+                  <div class="title">Quizzify AI</div>
+                </div>
+              </div>
+              <div data-value="" onclick="openProjectPopup(3)">
+                <div class="project" id="project_3">
+                  <img
+                    src="../assets/landing_page.webp"
+                    alt="Custom Homepage"
+                    title="Custom Homepage"
+                  />
+                  <div class="title">Custom Homepage</div>
+                </div>
+              </div>
+              <div data-value="" onclick="openProjectPopup(4)">
+                <div class="project" id="project_4">
+                  <img
+                    src="../assets/studio.png"
+                    alt="Photography Portfolio"
+                    title="Photography Portfolio"
+                  />
+                  <div class="title">Aryan Studio</div>
+                </div>
+              </div>
+              <div data-value="" onclick="openProjectPopup(5)">
+                <div class="project" id="project_5">
+                  <img
+                    src="../assets/title.webp"
+                    alt="Personal Portfolio"
+                    title="Personal Portfolio"
+                  />
+                  <div class="title">Portfolio Website</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project Popup Modal -->
+          <div id="projectModal" class="project-modal">
+            <div class="modal-backdrop" onclick="closeProjectPopup()"></div>
+            <div class="modal-content">
+              <button class="modal-close" onclick="closeProjectPopup()">
+                &times;
+              </button>
+              <div class="modal-header">
+                <img id="modalImage" src="" alt="" class="modal-image" />
+                <h2 id="modalTitle" class="modal-title"></h2>
+              </div>
+              <div class="modal-body">
+                <p id="modalDescription" class="modal-description"></p>
+                <div class="modal-tech-stack">
+                  <h3>Technologies Used</h3>
+                  <div id="modalTechStack" class="tech-stack-container"></div>
+                </div>
+                <a
+                  id="modalLink"
+                  href="#"
+                  target="_blank"
+                  class="modal-cta-button"
+                >
+                  View Live Demo
+                  <span class="button-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="contact_page page"
+            data-value="before_active"
+            onclick="active(4) "
+          >
+            <h2 class="line">CONTACT ME</h2>
+            <div class="contact_con">
+              <form action="#" autocomplete="off" target="_top" class="form">
+                <h3>Any Queries :</h3>
+                <label for="name" class="label">
+                  <p>Name :</p>
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    class="input name"
+                    required
+                    autocomplete="no"
+                  />
+                </label>
+                <label for="email" class="label">
+                  <p>Email id :</p>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    class="input email"
+                    required
+                    autocomplete="no"
+                  />
+                </label>
+                <label for="number" class="label">
+                  <p>Contact number :</p>
+                  <input
+                    type="tel"
+                    placeholder="contact number"
+                    pattern="[0-9]{10}"
+                    class="input number"
+                    autocomplete="no"
+                  />
+                </label>
+                <label for="query" class="label">
+                  <p>Query/Review :</p>
+                  <textarea
+                    type="message"
+                    placeholder="Query/Review"
+                    class="input message"
+                    minlength="20"
+                    required
+                    autocomplete="no"
+                  ></textarea>
+                </label>
+                <div>
+                  <button type="reset" class="submit reset">
+                    <img
+                      src="../assets/reset.png"
+                      height="20px"
+                      alt="reset"
+                      title="reset"
+                    />
+                  </button>
+                  <input
+                    type="submit"
+                    value="SUBMIT"
+                    class="submit"
+                    onclick="data()"
+                  />
+                </div>
+              </form>
+              <div class="social">
+                <h4>Follow me on -</h4>
+                <div class="media_icon">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png"
+                    alt="instagram"
+                  />
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"
+                    alt="facebook"
+                  />
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png"
+                    alt="Twitter(X)"
+                  />
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/2504/2504923.png"
+                    alt="Linkedin"
+                  />
+                </div>
+                <h4>Have a chat with me -</h4>
+                <div class="chat">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png"
+                    alt="Whatsapp"
+                  />
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png"
+                    alt="Telegram"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="arrow right" style="rotate: 180deg;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 11"
-                id="btn" class="arrow_right">
-                <path
-                    d="M1.08 5.03a19.07 19.07 0 007.07-2.8c.92-.6 1.82-1.23 2.6-2.01.68-.68 1.74.38 1.06 1.06a21.53 21.53 0 01-4.98 3.4c7.04.45 14.09.69 21.15.55 6.74-.13 13.48-.5 20.22-.66 5.36-.12 10.72-.13 16.08-.07.96.01.96 1.51 0 1.5-8.5-.1-17 .05-25.5.38-6.62.25-13.23.48-19.86.35-3.47-.07-6.93-.23-10.4-.43 1.7.65 3.28 1.6 4.4 3.07.25.33.05.84-.27 1.03-.38.23-.78.05-1.02-.27-1.46-1.9-4.05-2.72-6.3-3.18-1.32-.27-2.7-.45-4.05-.45-.82 0-1.06-1.33-.2-1.47"
-                    fill="#000" fill-rule="evenodd"></path>
-            </svg>
+        <div class="arrow right" style="rotate: 180deg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 65 11"
+            id="btn"
+            class="arrow_right"
+          >
+            <path
+              d="M1.08 5.03a19.07 19.07 0 007.07-2.8c.92-.6 1.82-1.23 2.6-2.01.68-.68 1.74.38 1.06 1.06a21.53 21.53 0 01-4.98 3.4c7.04.45 14.09.69 21.15.55 6.74-.13 13.48-.5 20.22-.66 5.36-.12 10.72-.13 16.08-.07.96.01.96 1.51 0 1.5-8.5-.1-17 .05-25.5.38-6.62.25-13.23.48-19.86.35-3.47-.07-6.93-.23-10.4-.43 1.7.65 3.28 1.6 4.4 3.07.25.33.05.84-.27 1.03-.38.23-.78.05-1.02-.27-1.46-1.9-4.05-2.72-6.3-3.18-1.32-.27-2.7-.45-4.05-.45-.82 0-1.06-1.33-.2-1.47"
+              fill="#000"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
         </div>
-    </div>
-    <footer>
-        Made by Aryan Srivastava
-    </footer>
-</body>
-<script src="../js/script_exp.js"></script>
+      </div>
+    </section>
+  </body>
+  <script src="../js/script_exp.js"></script>
+  <script>
+    // Mobile detection and navigation override
+    function isMobile() {
+      return window.innerWidth <= 768;
+    }
+
+    // Override the active function for mobile
+    if (isMobile()) {
+      // Disable horizontal navigation on mobile
+      window.active = function (index) {
+        // On mobile, do nothing - let natural scrolling handle navigation
+        console.log("Mobile mode: Navigation disabled, use scroll instead");
+        return;
+      };
+
+      // Show all pages on mobile and disable carousel
+      document.addEventListener("DOMContentLoaded", function () {
+        const content = document.querySelector(".content");
+        const pages = document.querySelectorAll(".page");
+
+        // Force vertical layout
+        if (content) {
+          content.style.display = "flex";
+          content.style.flexDirection = "column";
+          content.style.transform = "none";
+          content.style.transition = "none";
+          content.style.height = "auto";
+          content.style.overflow = "visible";
+        }
+
+        // Show all pages
+        pages.forEach((page, index) => {
+          page.style.display = "flex";
+          page.style.opacity = "1";
+          page.style.transform = "none";
+          page.style.position = "relative";
+          page.style.transition = "none";
+          page.style.left = "auto";
+          page.style.right = "auto";
+          page.style.top = "auto";
+          page.style.minHeight = "100vh";
+          page.style.marginBottom = "2rem";
+
+          // Remove any data-value restrictions
+          page.setAttribute("data-value", "active");
+        });
+
+        console.log("Mobile vertical layout activated");
+      });
+    }
+
+    // Re-check on window resize
+    window.addEventListener("resize", function () {
+      if (isMobile()) {
+        const pages = document.querySelectorAll(".page");
+        pages.forEach((page) => {
+          page.style.display = "flex";
+          page.style.opacity = "1";
+          page.style.transform = "none";
+          page.style.position = "relative";
+        });
+      }
+    });
+    // Project popup functionality
+    const projectData = {
+      1: {
+        title: "CSS Clock Design",
+        image: "../assets/clock.png",
+        description:
+          "A beautiful analog clock created purely with HTML and CSS. Features smooth animations, realistic shadows, and responsive design. This project demonstrates advanced CSS techniques including transforms, animations, and pseudo-elements.",
+        technologies: ["HTML5", "CSS3", "Animations"],
+        link: "https://aryansrivastava07.github.io/clock-by-css/html/",
+      },
+      2: {
+        title: "Quizzify - AI Quiz Platform",
+        image: "../assets/quizzify.png",
+        description:
+          "An advanced AI-driven quiz platform that generates intelligent quizzes from various sources. Features PDF parsing, natural language processing, and adaptive question generation. Built with modern web technologies and AI integration.",
+        technologies: ["React", "Node.js", "AI/ML", "PDF.js"],
+        link: "https://quizzifypdf.onrender.com/",
+      },
+      3: {
+        title: "Custom Browser Homepage",
+        image: "../assets/landing_page.webp",
+        description:
+          "A personalized homepage designed to replace the default new tab page in browsers. Features quick access to frequently visited sites, weather information, and a clean, minimalist design that enhances productivity.",
+        technologies: ["HTML5", "CSS3", "JavaScript", "API Integration"],
+        link: "https://aryansrivastava07.github.io/homepage/",
+      },
+      4: {
+        title: "Photography Portfolio Website",
+        image: "../assets/studio.png",
+        description:
+          "A stunning portfolio website for photographers and videographers. Features a responsive gallery, smooth animations, and an elegant design that showcases creative work beautifully. Optimized for both desktop and mobile viewing.",
+        technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+        link: "https://aryansrivastava07.github.io/Aryan-studio/html/exp",
+      },
+      5: {
+        title: "Personal Portfolio Website",
+        image: "../assets/title.webp",
+        description:
+          "This very portfolio you're viewing! A modern, interactive portfolio showcasing my skills, projects, and experience. Features custom animations, responsive design, and an intuitive user interface built with vanilla JavaScript and CSS.",
+        technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+        link: "#",
+      },
+    };
+
+    function openProjectPopup(projectId) {
+      const modal = document.getElementById("projectModal");
+      const project = projectData[projectId];
+
+      if (!project) return;
+
+      // Populate modal content
+      document.getElementById("modalImage").src = project.image;
+      document.getElementById("modalImage").alt = project.title;
+      document.getElementById("modalTitle").textContent = project.title;
+      document.getElementById("modalDescription").textContent =
+        project.description;
+
+      // Populate tech stack
+      const techContainer = document.getElementById("modalTechStack");
+      techContainer.innerHTML = "";
+      project.technologies.forEach((tech) => {
+        const techBadge = document.createElement("span");
+        techBadge.className = "tech-badge";
+        techBadge.textContent = tech;
+        techContainer.appendChild(techBadge);
+      });
+
+      // Set link
+      const modalLink = document.getElementById("modalLink");
+      modalLink.href = project.link;
+      if (project.link === "#") {
+        modalLink.textContent = "You're Here!";
+        const buttonArrow = modalLink.querySelector(".button-arrow");
+        if (buttonArrow) {
+          buttonArrow.style.display = "none";
+        }
+      } else {
+        modalLink.innerHTML =
+          'View Live Demo <span class="button-arrow">→</span>';
+      }
+
+      // Show modal
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+
+      // Prevent event bubbling
+      event.stopPropagation();
+    }
+
+    function closeProjectPopup() {
+      const modal = document.getElementById("projectModal");
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
+    // Close modal on Escape key
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeProjectPopup();
+      }
+    });
+
+    // Prevent modal content clicks from closing modal
+    const modalContent = document.querySelector(".modal-content");
+    if (modalContent) {
+      modalContent.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+    }
+
+    function toggleStraight(balloon) {
+      balloon.classList.toggle("straightened");
+    }
+
+    function scrollTimeline(direction) {
+      const trail = document.getElementById("timeline-trail");
+      const scrollAmount = 300; // Adjust scroll distance as needed
+
+      if (direction === "left") {
+        trail.scrollBy({
+          left: -scrollAmount,
+          behavior: "smooth",
+        });
+      } else if (direction === "right") {
+        trail.scrollBy({
+          left: scrollAmount,
+          behavior: "smooth",
+        });
+      }
+
+      // Update button visibility after scroll
+      setTimeout(() => updateScrollButtons(), 300);
+    }
+
+    function updateScrollButtons() {
+      const trail = document.getElementById("timeline-trail");
+      const leftBtn = document.querySelector(".timeline-scroll-left");
+      const rightBtn = document.querySelector(".timeline-scroll-right");
+
+      if (!trail || !leftBtn || !rightBtn) return;
+
+      const isAtStart = trail.scrollLeft <= 10;
+      const isAtEnd =
+        trail.scrollLeft >= trail.scrollWidth - trail.clientWidth - 10;
+
+      leftBtn.style.opacity = isAtStart ? "0.3" : "1";
+      leftBtn.style.pointerEvents = isAtStart ? "none" : "auto";
+
+      rightBtn.style.opacity = isAtEnd ? "0.3" : "1";
+      rightBtn.style.pointerEvents = isAtEnd ? "none" : "auto";
+    }
+
+    // Initialize scroll buttons when history page is active
+    document.addEventListener("DOMContentLoaded", function () {
+      const trail = document.getElementById("timeline-trail");
+      if (trail) {
+        trail.addEventListener("scroll", updateScrollButtons);
+        updateScrollButtons(); // Initial check
+      }
+    });
+  </script>
 </html>

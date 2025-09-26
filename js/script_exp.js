@@ -6,7 +6,7 @@ var navbar_child = document.querySelector(".navbar").children;
 var content = document.querySelector(".content");
 var arrow = document.querySelectorAll(".arrow");
 var page = document.getElementsByClassName('page');
-var cursor = document.querySelector(".cursor")
+var cursor = document.querySelector(".cursor");
 var cursorfolower = document.querySelector(".cursor_folower");
 var arrow_left = document.querySelector(".arrow_left");
 var arrow_right = document.querySelector(".arrow_right");
@@ -31,12 +31,10 @@ document.addEventListener("mousemove", e => {
     if (content.matches(":hover") && ham.checked != true) {
         arrowtoggle('hide');
         content.classList.add("content_hover");
-    }
-    else if (ham.checked != true) {
+    } else if (ham.checked != true) {
         arrowtoggle('show');
         content.classList.remove("content_hover");
-    }
-    else {
+    } else {
         arrowtoggle('hide');
         content.classList.remove("content_hover");
     }
@@ -58,11 +56,9 @@ document.addEventListener("mousemove", e => {
         if (Math.abs(e.clientY - arrowfromtop) < 100 && element.matches(":hover")) {
             if (element.classList.contains("left")) {
                 element.style.transform = `translateY(${(e.clientY - arrowfromtop)}px)`;
-            }
-            else if (element.classList.contains("right"))
+            } else if (element.classList.contains("right"))
                 element.style.transform = `translate(0,${(arrowfromtop - e.clientY)}px)`;
-        }
-        else {
+        } else {
             element.style.transform = "none";
         }
     })
@@ -102,6 +98,7 @@ var touch = e => {
 }
 content.addEventListener("pointerup", end);
 content.addEventListener("pointerleave", end);
+
 function end() {
     content.removeEventListener("pointermove", touch);
 }
@@ -135,18 +132,19 @@ ham.onclick = () => {
             page[j].classList.add("pageon_ham_show");
         }
         page[active_index].classList.add("page_hovonnav");
-    }
-    else {
+    } else {
         ham_uncheck();
     }
 
 }
+
 function ham_uncheck() {
     for (j = 0; j < page.length; j++) {
         page[j].classList.remove("pageon_ham_show");
         page[j].classList.remove("page_hovonnav");
     }
 }
+
 function active(index) {
     if (ham.checked === true) {
         active_index = index;
@@ -155,18 +153,19 @@ function active(index) {
         ham_uncheck();
     }
 }
+
 function arrowtoggle(type) {
     if (type === "hide") {
         arrow.forEach(element => {
             element.classList.add("arrow_hide");
         });
-    }
-    else {
+    } else {
         arrow.forEach(element => {
             element.classList.remove("arrow_hide");
         });
     }
 }
+
 function corosel(active_index) {
     page[active_index].setAttribute("data-value", "active");
     page[(active_index + 1) % page.length].setAttribute("data-value", "after_active");
@@ -188,10 +187,15 @@ setInterval(() => {
     if (j >= status_tt.length)
         j = 0;
     var status_text = document.querySelector(".status_text");
-    const keyframe = [
-        { width: "0%" },
-        { width: `${letters}ch` },
-        { width: `${letters}ch` },
+    const keyframe = [{
+            width: "0%"
+        },
+        {
+            width: `${letters}ch`
+        },
+        {
+            width: `${letters}ch`
+        },
     ];
     const timing = {
         duration: 1500,

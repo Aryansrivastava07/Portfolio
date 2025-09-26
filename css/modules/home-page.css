@@ -1,0 +1,194 @@
+/* ===================================
+   HOME PAGE MODULE - EXACT COPY FROM STYLE_EXP.CSS
+   ===================================
+   
+   Complete original home page styles from style_exp.css
+   =================================== */
+
+/* Required Variables */
+:root {
+  --poppins: "Poppins", sans-serif;
+  --text-color: white;
+  --status-color: rgb(251, 146, 60);
+  --page-color: rgba(99, 102, 241, 0.2);
+}
+
+
+.home_page {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 100%;
+  padding: 0 15px;
+  font-size: clamp(0.7em, 1.2vw, 1em);
+}
+
+.home_page .img {
+  position: relative;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  animation: floatImage 6s ease-in-out infinite;
+}
+
+.home_page .img img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.img::after,
+.img::before {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.img::before {
+  width: 90%;
+  background-color: rgb(255, 255, 255);
+}
+
+.img::after {
+  width: 70%;
+  background-color: var(--page-color);
+}
+
+.home_page p {
+  /* position: relative; */
+  line-height: 1.4em;
+  color: var(--text-color);
+}
+
+.br {
+  display: none;
+}
+
+/* .home_page p:hover {
+  --line-color: rgba(10, 43, 77, 1);
+} */
+
+.intro {
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding: 2em;
+  position: relative;
+  z-index: 2;
+  /* & h2 p {
+    text-align: center;
+  } */
+}
+
+/* .intro::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1),
+    rgba(129, 140, 248, 0.05)
+  );
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+} */
+/* 
+.intro:hover::before {
+  opacity: 1;
+} */
+
+.intro h2 {
+  font-weight: 700;
+  font-family: var(--poppins);
+  color: var(--text-color);
+  line-height: 1.3em;
+  font-size: clamp(1.8em, 4vw, 3.2em);
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    rgba(99, 102, 241, 0.9),
+    rgba(129, 140, 248, 0.8)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+}
+
+.status {
+  display: flex;
+  margin: auto;
+}
+
+.status p:nth-of-type(1) {
+  width: 0%;
+  animation: typewrite 1s 2s steps(7) 1 forwards;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.status_text {
+  font-weight: bold;
+  overflow: hidden;
+  width: 0;
+  white-space: nowrap;
+}
+
+.status_tt {
+  position: relative;
+  display: none;
+  color: var(--status-color);
+}
+
+.status_tt:hover {
+  --line-color: var(--status-color);
+}
+
+.status_show {
+  display: block;
+}
+
+@keyframes typewrite {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 7ch;
+  }
+}
+
+@keyframes floatImage {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

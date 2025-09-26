@@ -1,0 +1,115 @@
+/* ===================================
+   SKILLS PAGE MODULE - EXACT COPY FROM STYLE_EXP.CSS
+   ===================================
+   
+   Extracted skills page styles from style_exp.css
+   without any modifications.
+   =================================== */
+
+:root {
+  --line-color: rgb(99, 102, 241);
+  --accent-color: rgb(49, 62, 234);
+  --accent-hover: rgb(241, 241, 241);
+  --aclonica: "Aclonica", sans-serif;
+  --bungee: "Bungee Spice", Copperplate, Papyrus, fantasy, cursive;
+  --inter: "Inter", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --cursor-color: #ffff;
+  --text-color: white;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --status-color: rgb(251, 146, 60);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+/* Skills Page General Styles */
+:is(.skill_page, .project_page, .contact_page) {
+  text-align: center;
+  padding: 0.5em;
+}
+
+.skill_content {
+  padding: 1em;
+  display: flex;
+  height: 60%;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.skill_content::-webkit-scrollbar {
+  display: none !important;
+}
+
+.skill_contentt::-webkit-scrollbar {
+  display: none !important;
+}
+
+.skill_content *::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.skill_card {
+  height: clamp(60px, 35%, 80px);
+  width: clamp(120px, 20%, 160px);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(99, 102, 241, 0.2);
+    background-color: white;
+    & .back {
+      color: black;
+    }
+  }
+
+  & img {
+    padding: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  & .front {
+    background: var(--card-bg);
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  & .back {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    font-size: clamp(0.7em, 1.5vw, 1.1em);
+    font-family: var(--inter);
+    font-weight: 600;
+    text-align: center;
+    word-break: break-all;
+    background: linear-gradient(
+      135deg,
+      var(--accent-color),
+      var(--accent-hover)
+    );
+    color: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+:is(.project_con > div:hover, .skill_card:hover) .front {
+  transform: rotateY(180deg);
+}
+
+:is(.project_con > div:hover, .skill_card:hover) .back {
+  transform: rotateY(360deg);
+  scale: 1 1;
+}

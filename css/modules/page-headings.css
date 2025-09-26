@@ -1,0 +1,370 @@
+/* ===================================
+   PAGE HEADINGS SYSTEM MODULE
+   ===================================
+   
+   This module contains:
+   - Universal heading system with glassmorphism
+   - Gradient text effects for each page
+   - Interactive hover effects
+   - Entrance animations
+   - Responsive design for headings
+*/
+
+/* Enhanced Page Headings System - Premium Typography */
+.page h2.line {
+  position: relative;
+  font-family: "Poppins", "Inter", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.5rem 2.5rem;
+  margin: 2rem 0 3rem 0;
+  line-height: 1.2;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.95) 15%,
+    rgba(20, 184, 166, 0.9) 35%,
+    rgba(14, 165, 233, 0.9) 55%,
+    rgba(99, 102, 241, 0.9) 75%,
+    rgba(168, 85, 247, 0.9) 90%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  overflow: visible;
+  z-index: 10;
+  color: transparent;
+  animation: gradientFlow 4s ease-in-out infinite;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.page h2.line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 184, 166, 0.1) 0%,
+    rgba(14, 165, 233, 0.1) 25%,
+    rgba(99, 102, 241, 0.1) 50%,
+    rgba(168, 85, 247, 0.1) 75%,
+    rgba(20, 184, 166, 0.1) 100%
+  );
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.page h2.line:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0 25px 50px rgba(20, 184, 166, 0.2);
+}
+
+/* Specific page heading customizations with enhanced typography */
+.skill_page h2.line {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  letter-spacing: 4px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.95) 10%,
+    rgba(34, 197, 94, 0.9) 30%,
+    rgba(16, 185, 129, 0.9) 50%,
+    rgba(6, 182, 212, 0.9) 70%,
+    rgba(8, 145, 178, 0.9) 90%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(34, 197, 94, 0.3);
+}
+
+.skill_page h2.line::before {
+  background: linear-gradient(
+    135deg,
+    rgba(34, 197, 94, 0.1) 0%,
+    rgba(16, 185, 129, 0.1) 25%,
+    rgba(6, 182, 212, 0.1) 50%,
+    rgba(8, 145, 178, 0.1) 75%,
+    rgba(34, 197, 94, 0.1) 100%
+  );
+}
+
+.skill_page h2.line:hover::before {
+  box-shadow: 0 25px 50px rgba(34, 197, 94, 0.2);
+}
+
+.skill_page h2.line::after {
+  background: linear-gradient(
+    90deg,
+    rgba(34, 197, 94, 0.8) 0%,
+    rgba(16, 185, 129, 0.9) 25%,
+    rgba(6, 182, 212, 0.9) 50%,
+    rgba(8, 145, 178, 0.8) 100%
+  );
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.4);
+}
+
+.project_page h2.line {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  letter-spacing: 4px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.95) 10%,
+    rgba(236, 72, 153, 0.9) 30%,
+    rgba(219, 39, 119, 0.9) 50%,
+    rgba(190, 24, 93, 0.9) 70%,
+    rgba(157, 23, 77, 0.9) 90%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(236, 72, 153, 0.3);
+}
+
+.project_page h2.line::before {
+  background: linear-gradient(
+    135deg,
+    rgba(236, 72, 153, 0.1) 0%,
+    rgba(219, 39, 119, 0.1) 25%,
+    rgba(190, 24, 93, 0.1) 50%,
+    rgba(157, 23, 77, 0.1) 75%,
+    rgba(236, 72, 153, 0.1) 100%
+  );
+}
+
+.project_page h2.line:hover::before {
+  box-shadow: 0 25px 50px rgba(236, 72, 153, 0.2);
+}
+
+.project_page h2.line::after {
+  background: linear-gradient(
+    90deg,
+    rgba(236, 72, 153, 0.8) 0%,
+    rgba(219, 39, 119, 0.9) 25%,
+    rgba(190, 24, 93, 0.9) 50%,
+    rgba(157, 23, 77, 0.8) 100%
+  );
+  box-shadow: 0 2px 8px rgba(236, 72, 153, 0.4);
+}
+
+.contact_page h2.line {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  letter-spacing: 4px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.95) 10%,
+    rgba(251, 191, 36, 0.9) 30%,
+    rgba(245, 158, 11, 0.9) 50%,
+    rgba(217, 119, 6, 0.9) 70%,
+    rgba(180, 83, 9, 0.9) 90%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(251, 191, 36, 0.3);
+}
+
+.contact_page h2.line::before {
+  background: linear-gradient(
+    135deg,
+    rgba(251, 191, 36, 0.1) 0%,
+    rgba(245, 158, 11, 0.1) 25%,
+    rgba(217, 119, 6, 0.1) 50%,
+    rgba(180, 83, 9, 0.1) 75%,
+    rgba(251, 191, 36, 0.1) 100%
+  );
+}
+
+.contact_page h2.line:hover::before {
+  box-shadow: 0 25px 50px rgba(251, 191, 36, 0.2);
+}
+
+.contact_page h2.line::after {
+  background: linear-gradient(
+    90deg,
+    rgba(251, 191, 36, 0.8) 0%,
+    rgba(245, 158, 11, 0.9) 25%,
+    rgba(217, 119, 6, 0.9) 50%,
+    rgba(180, 83, 9, 0.8) 100%
+  );
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.4);
+}
+
+/* Heading entrance animations */
+.page h2.line {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: headingFadeInUp 0.8s ease forwards;
+}
+
+.skill_page h2.line {
+  animation-delay: 0.2s;
+}
+
+.history_page h2.line {
+  animation-delay: 0.1s;
+}
+
+.project_page h2.line {
+  animation-delay: 0.3s;
+}
+
+.contact_page h2.line {
+  animation-delay: 0.4s;
+}
+
+@keyframes headingFadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gradient flow animation for dynamic text effect */
+@keyframes gradientFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 25%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  75% {
+    background-position: 100% 75%;
+  }
+}
+
+/* Floating particles effect for headings */
+.page h2.line::after {
+  position: relative;
+  overflow: hidden;
+}
+
+.page h2.line::after::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmerHeading 2s ease-in-out infinite;
+}
+
+@keyframes shimmerHeading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+.page h2.line:focus {
+  outline: none;
+  transform: scale(1.02);
+}
+
+.page h2.line:focus::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.page h2.line:focus::after {
+  width: 90%;
+}
+
+/* Responsive heading adjustments with enhanced typography */
+@media (max-width: 1024px) {
+  .page h2.line {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    letter-spacing: 2.5px;
+    padding: 1.2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page h2.line {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0 2.5rem 0;
+  }
+  
+  .skill_page h2.line,
+  .project_page h2.line,
+  .contact_page h2.line {
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page h2.line {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.8rem 1rem;
+    margin: 1rem 0 2rem 0;
+    line-height: 1.1;
+  }
+
+  .page h2.line::before {
+    width: 110%;
+    height: 110%;
+  }
+  
+  .skill_page h2.line,
+  .project_page h2.line,
+  .contact_page h2.line {
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 320px) {
+  .page h2.line {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    padding: 0.6rem 0.8rem;
+    margin: 0.8rem 0 1.5rem 0;
+  }
+}

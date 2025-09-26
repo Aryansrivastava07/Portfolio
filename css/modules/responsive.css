@@ -1,0 +1,582 @@
+/* ===================================
+   RESPONSIVE DESIGN MODULE
+   ===================================
+   
+   This module contains:
+   - Global responsive breakpoints
+   - Cross-module responsive adjustments
+   - Mobile-first responsive utilities
+   - Tablet and desktop optimizations
+*/
+
+/* Global Responsive Utilities */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile Vertical Scrolling Override */
+@media (max-width: 768px) {
+  /* Force vertical scrolling on all main containers */
+  html {
+    height: auto;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    height: auto !important;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+  
+  /* Hide arrow navigation on mobile */
+  .arrow {
+    display: none !important;
+  }
+  
+  /* Override any fixed heights */
+  .section,
+  .container,
+  .content {
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Mobile vertical card stack layout */
+  .content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    overflow-y: visible !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  /* Stack all pages vertically */
+  .page {
+    height: auto !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    width: 100% !important;
+    overflow-y: visible !important;
+    margin-bottom: 2rem;
+    scroll-snap-align: start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+  }
+  
+  /* Remove border from last page */
+  .page:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  
+  /* Enable scroll snapping for smooth page transitions */
+  .content {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scroll-padding-top: 2rem;
+  }
+  
+  /* Ensure all pages are visible and stacked */
+  .page[data-value="active"],
+  .page[data-value="inactive"],
+  .page[data-value="before_active"],
+  .page[data-value="after_active"] {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: none !important;
+    position: relative !important;
+    transition: none !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+  }
+  
+  /* Override any carousel transforms */
+  .content,
+  .content * {
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  /* Force mobile layout regardless of JavaScript */
+  .content {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+  }
+  
+  /* Add subtle page indicators */
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(99, 102, 241, 0.3),
+      rgba(168, 85, 247, 0.3)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Show indicator when page is in viewport */
+  .page[data-value="active"]::before {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Large tablets and small desktops */
+  .page {
+    padding: 1.5rem 1rem;
+  }
+  
+  .section {
+    margin: 0 0.5rem;
+  }
+}
+
+/* Tablet Breakpoint - 768px */
+@media (max-width: 768px) {
+  /* Global tablet adjustments */
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+  }
+  
+  /* Main layout containers for vertical scrolling */
+  .section {
+    height: auto !important;
+    overflow-y: auto;
+  }
+  
+  .container {
+    height: auto !important;
+    min-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    height: auto !important;
+    overflow-y: visible;
+    flex: 1;
+  }
+  
+  .page {
+    padding: 1rem 0.5rem;
+    height: auto !important;
+    min-height: 100vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  /* Navigation adjustments */
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  /* Grid layouts become single column */
+  .grid-2-cols {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Reduce spacing */
+  .section {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    height: auto;
+  }
+  
+  /* Button adjustments */
+  .btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Modal adjustments */
+  .modal-content {
+    margin: 1rem;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  
+  /* Card adjustments */
+  .card {
+    padding: 1.5rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Mobile Breakpoint - 720px (from res_exp.css) */
+@media screen and (max-width: 720px) {
+  .home_page .br {
+    display: block;
+  }
+}
+
+/* Mobile Breakpoint - 480px */
+@media (max-width: 480px) {
+  /* Global mobile adjustments */
+  body {
+    font-size: 13px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+  }
+  
+  /* Cursor disabled on mobile (from res_exp.css) */
+  * {
+    cursor: auto !important;
+  }
+  
+  .cursor {
+    display: none !important;
+  }
+  
+  .cursor_folower {
+    display: none !important;
+  }
+  
+  /* Container adjustments (from res_exp.css) */
+  .container {
+    width: 100% !important;
+    padding: 5% !important;
+    grid-template-columns: 1fr !important;
+    place-items: center !important;
+  }
+  
+  .content {
+    scale: 1.4 !important;
+  }
+  
+  /* Home page mobile layout (from res_exp.css) */
+  .home_page {
+    grid-template-areas: "a a" "b b" !important;
+    grid-auto-rows: 60% 40% !important;
+  }
+  
+  .status {
+    flex-direction: column !important;
+  }
+  
+  .status_show {
+    display: block !important;
+  }
+  
+  .home_page .intro {
+    grid-area: a !important;
+  }
+  
+  .home_page .img {
+    grid-area: b !important;
+    object-fit: fill !important;
+  }
+  
+  /* Hide arrows on small mobile too */
+  .arrow {
+    display: none !important;
+  }
+  
+  /* Main layout containers for vertical scrolling */
+  .section {
+    height: auto !important;
+    overflow-y: auto;
+  }
+  
+  .container {
+    height: auto !important;
+    min-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Mobile vertical card stack layout */
+  .content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    overflow-y: visible !important;
+    scroll-snap-type: y mandatory;
+  }
+  
+  /* Stack all pages vertically with smaller spacing */
+  .page {
+    padding: 0.5rem 0.25rem;
+    height: auto !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    width: 100% !important;
+    overflow-y: visible !important;
+    margin-bottom: 1rem;
+    scroll-snap-align: start;
+  }
+  
+  /* Ensure all pages are visible and stacked */
+  .page[data-value="active"],
+  .page[data-value="inactive"],
+  .page[data-value="before_active"],
+  .page[data-value="after_active"] {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: none !important;
+    position: relative !important;
+  }
+  
+  /* Typography scaling */
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Navigation for mobile */
+  .navbar {
+    padding: 0.5rem;
+  }
+  
+  .hamburger {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Reduce all spacing */
+  .section {
+    margin: 0.25rem 0;
+    padding: 0.75rem;
+    height: auto;
+  }
+  
+  /* Button mobile sizing */
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+  
+  /* Modal mobile adjustments */
+  .modal-content {
+    margin: 0.5rem;
+    max-height: 90vh;
+    border-radius: 12px;
+    overflow-y: auto;
+  }
+  
+  /* Card mobile sizing */
+  .card {
+    padding: 1rem;
+    margin: 0.25rem 0;
+    border-radius: 12px;
+  }
+  
+  /* Form elements */
+  .input {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Image scaling */
+  .img img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Gap adjustments */
+  .flex-gap {
+    gap: 0.5rem;
+  }
+  
+  .grid-gap {
+    gap: 0.75rem;
+  }
+}
+
+/* Extra small devices - 320px */
+@media (max-width: 320px) {
+  body {
+    font-size: 12px;
+  }
+  
+  .page {
+    padding: 0.25rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+  
+  .section {
+    padding: 0.5rem;
+  }
+  
+  .card {
+    padding: 0.75rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .page {
+    padding: 0.5rem;
+  }
+  
+  .modal-content {
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+  
+  .section {
+    padding: 0.75rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .img img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print styles */
+@media print {
+  .page {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .modal,
+  .hamburger,
+  .btn {
+    display: none !important;
+  }
+  
+  .section {
+    break-inside: avoid;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+  /* Already using dark theme, but can add overrides here if needed */
+}
+
+/* Responsive utility classes */
+.hide-mobile {
+  display: block;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+  
+  .show-mobile {
+    display: block;
+  }
+}
+
+.hide-tablet {
+  display: block;
+}
+
+.show-tablet {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .hide-tablet {
+    display: none;
+  }
+  
+  .show-tablet {
+    display: block;
+  }
+}
+
+/* Container responsive classes */
+.container-fluid {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.container-sm {
+  max-width: 576px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container-md {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container-lg {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container-xl {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
