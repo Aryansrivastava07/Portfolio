@@ -41,10 +41,11 @@ This implementation provides a mobile-optimized static version of Aryan Srivasta
 - **Accessibility**: Reduced motion support, proper focus states, semantic HTML
 
 ### Desktop Prompt System
-- **Overlay Modal**: Prominent prompt encouraging desktop viewing
-- **User Choice**: Option to continue on mobile or switch to desktop
+- **Overlay Modal**: Prominent prompt encouraging larger screen viewing
+- **User Choice**: Option to continue on mobile (no desktop redirect button)
 - **Session Memory**: Remembers user preference for the session
 - **Smart Detection**: Only shows for actual mobile devices
+- **Resize Detection**: Detects when users switch to desktop mode and shows notification
 
 ### Content Sections
 1. **Home**: Profile image, introduction, and role highlights
@@ -77,25 +78,21 @@ The device detection script automatically:
 
 ### Performance Optimizations
 - **Minimal JavaScript**: Only essential functionality
-- **Optimized CSS**: Efficient selectors and minimal animations
 - **Lazy Loading**: Intersection Observer for better performance
 - **Debounced Events**: Optimized scroll and resize handlers
 
 ## Usage Instructions
 
-### For Mobile Users
-1. Visit any portfolio page on a mobile device
-2. Choose "View Mobile Version" from the prompt
-3. Enjoy the optimized mobile experience
-4. Use navigation to jump between sections
-
-### For Desktop Users
-1. Mobile users can choose "Continue Here" to stay on desktop version
-2. Desktop version includes warning banner for mobile users
-3. All functionality preserved for desktop experience
+### 9. **User Experience Flow**
+1. Mobile user visits desktop portfolio page
+2. Device detection script identifies mobile device
+3. Shows preference modal: "View Mobile Version" or "Continue Here"
+4. If mobile chosen: redirects to optimized mobile-static.html
+5. Mobile page provides clean, fast, touch-friendly experience
+6. Desktop prompt available encouraging larger screen viewing (no redirect button)
+7. Resize detection: If user switches to desktop mode, shows clickable notification
 
 ### For Developers
-1. **Testing**: Open `html/mobile-static.html` on mobile devices
 2. **Customization**: Modify `css/mobile-static.css` for styling changes
 3. **Configuration**: Adjust settings in `js/device-redirect.js`
 

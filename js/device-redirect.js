@@ -164,9 +164,9 @@
                     border: 1px solid rgba(255,255,255,0.1);
                 ">
                     <div style="font-size: 48px; margin-bottom: 16px;">💻</div>
-                    <h2 style="color: white; margin: 0 0 16px 0; font-size: 24px; font-weight: 700;">Mobile Device Detected</h2>
+                    <h2 style="color: white; margin: 0 0 16px 0; font-size: 24px; font-weight: 700;">Best Viewed on Larger Screens</h2>
                     <p style="color: #d1d5db; margin: 0 0 24px 0; line-height: 1.5;">
-                        This portfolio is optimized for desktop viewing with interactive animations and carousel navigation.
+                        This portfolio features interactive animations and carousel navigation that work best on desktop or tablet devices with larger screens.
                     </p>
                     <div style="display: flex; flex-direction: column; gap: 12px;">
                         <button onclick="goToMobileVersion()" style="

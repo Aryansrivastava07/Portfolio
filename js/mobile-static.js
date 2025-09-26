@@ -10,6 +10,7 @@ function initializeApp() {
     setupDesktopPrompt();
     setupFormHandling();
     checkDeviceAndShowPrompt();
+    setupResizeDetection();
 }
 
 // Navigation functionality
@@ -187,11 +188,11 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-function showNotification(message, type = 'info') {
+function showNotification(message, type = 'info', duration = 4000, clickAction = null) {
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
-    notification.textContent = message;
+    notification.innerHTML = message;
     
     // Style the notification
     Object.assign(notification.style, {
@@ -203,10 +204,12 @@ function showNotification(message, type = 'info') {
         color: 'white',
         fontWeight: '500',
         zIndex: '1001',
-        maxWidth: '300px',
+        maxWidth: '350px',
         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
         transform: 'translateX(100%)',
-        transition: 'transform 0.3s ease'
+        transition: 'transform 0.3s ease',
+        cursor: clickAction ? 'pointer' : 'default',
+        lineHeight: '1.4'
     });
     
     // Set background color based on type
@@ -219,6 +222,13 @@ function showNotification(message, type = 'info') {
             break;
         default:
             notification.style.background = 'linear-gradient(135deg, #6366f1, #a855f7)';
+    }
+    
+    // Add click action if provided
+    if (clickAction) {
+        notification.addEventListener('click', clickAction);
+        notification.style.cursor = 'pointer';
+        notification.title = 'Click to open desktop version';
     }
     
     // Add to page
@@ -237,7 +247,7 @@ function showNotification(message, type = 'info') {
                 notification.parentNode.removeChild(notification);
             }
         }, 300);
-    }, 4000);
+    }, duration);
 }
 
 // Smooth scrolling for browsers that don't support CSS scroll-behavior
@@ -284,8 +294,23 @@ const debouncedScrollHandler = debounce(updateActiveNavLink, 100);
 window.removeEventListener('scroll', updateActiveNavLink);
 window.addEventListener('scroll', debouncedScrollHandler);
 
+function setupResizeDetection() {
+    // Debounced resize handler to check for desktop mode
+    const debouncedResizeCheck = debounce(() => {
+        checkForDesktopResize();
+    }, 500);
+    
+    window.addEventListener('resize', debouncedResizeCheck);
+    
+    // Also check on orientation change
+    window.addEventListener('orientationchange', () => {
+        setTimeout(() => {
+            checkForDesktopResize();
+        }, 1000); // Wait for orientation change to complete
+    });
+}
+
 // Global functions for HTML onclick handlers
-window.openDesktop = openDesktop;
 window.closePrompt = closePrompt;
 
 // Add loading state management

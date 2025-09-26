@@ -252,6 +252,55 @@ body {
   font-weight: 600;
 }
 
+.about-me {
+  margin-top: var(--spacing-lg);
+  text-align: left;
+}
+
+.about-me p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--gray-300);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.about-me strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.quick-stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-md);
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-indigo);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  font-weight: 500;
+}
+
 /* Skills Section */
 .skills-grid {
   display: grid;
@@ -341,6 +390,24 @@ body {
   color: var(--gray-300);
   font-size: 0.9rem;
   line-height: 1.5;
+  margin-bottom: var(--spacing-sm);
+}
+
+.timeline-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.skill-badge {
+  background: rgba(99, 102, 241, 0.2);
+  color: var(--primary-indigo);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 /* Projects Section */
@@ -493,6 +560,43 @@ body {
 .social-links h4 {
   margin-top: var(--spacing-lg);
   font-size: 1rem;
+}
+
+.contact-info {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  text-align: left;
+}
+
+.contact-info p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--gray-300);
+  line-height: 1.5;
+}
+
+.contact-info strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.contact-info a {
+  color: var(--primary-indigo);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.chat-icons p {
+  color: var(--gray-300);
+  line-height: 1.5;
+  font-size: 0.9rem;
+  margin-top: var(--spacing-sm);
 }
 
 .social-icons,
