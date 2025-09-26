@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Srivastava - Portfolio (Mobile)</title>
+    <link rel="stylesheet" href="../css/mobile-static.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Desktop Prompt Overlay -->
+    <div id="desktop-prompt" class="desktop-prompt">
+        <div class="prompt-content">
+            <div class="prompt-icon">💻</div>
+            <h2>Best Viewed on Larger Screens</h2>
+            <p>This portfolio features interactive animations and carousel navigation that work best on desktop or tablet devices with larger screens.</p>
+            <div class="prompt-buttons">
+                <button onclick="closePrompt()" class="btn-primary">Continue Here</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Static Content -->
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="name">Aryan Srivastava</h1>
+                <p class="tagline">Full Stack Developer</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#history" class="nav-link">History</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <div class="profile-container">
+                <img src="../assets/aa.png" alt="Aryan Srivastava" class="profile-image">
+                <div class="intro-text">
+                    <h2>Hi, I am Aryan Srivastava</h2>
+                    <div class="status">
+                        <p>I am a <span class="highlight">Web Developer</span></p>
+                        <p>I am a <span class="highlight">Software Developer</span></p>
+                        <p>I am a <span class="highlight">Web Enthusiast</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="HTML5" class="skill-icon">
+                    <h3>HTML5</h3>
+                    <p>Semantic markup and modern web standards for building structured, accessible web content.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="CSS3" class="skill-icon">
+                    <h3>CSS3</h3>
+                    <p>Advanced styling, animations, and responsive design with modern CSS features and frameworks.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" class="skill-icon">
+                    <h3>JavaScript</h3>
+                    <p>Dynamic web applications with ES6+, DOM manipulation, and modern JavaScript frameworks.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png" alt="C Programming" class="skill-icon">
+                    <h3>C Programming</h3>
+                    <p>System programming, data structures, and algorithmic problem-solving with C language.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section history-section">
+            <h2 class="section-title">My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2019</div>
+                    <div class="timeline-content">
+                        <h3>Started BTech CSE</h3>
+                        <p>Began my journey in Computer Science and Engineering at GL Bajaj Institute of Technology and Management</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h3>Web Development Focus</h3>
+                        <p>Specialized in web technologies and modern development frameworks</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>Project Development</h3>
+                        <p>Built multiple web applications and gained hands-on experience</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>Graduation</h3>
+                        <p>Completed BTech in Computer Science and Engineering</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="../assets/Screenshot 2023-08-27 235626.png" alt="CSS Shape Project" class="project-image">
+                    <div class="project-content">
+                        <h3>CSS Shape Design</h3>
+                        <p>A creative shape design project built purely with HTML and CSS, showcasing advanced CSS techniques.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="../assets/landing_page.webp" alt="Homepage Project" class="project-image">
+                    <div class="project-content">
+                        <h3>Browser Homepage</h3>
+                        <p>A custom homepage designed for browser new tab replacement with clean design and functionality.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <a href="https://aryansrivastava07.github.io/homepage/" target="_blank" class="project-link">View Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-placeholder">
+                        <span>🚀</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>This interactive portfolio website with carousel navigation and modern design.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <div class="social-links">
+                    <h3>Connect with me</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2504/2504923.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <div class="chat-icons">
+                        <h4>Chat with me</h4>
+                        <a href="#" class="social-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png" alt="WhatsApp">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png" alt="Telegram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Aryan Srivastava. All rights reserved.</p>
+            <p class="desktop-note">💡 For the best experience, view this portfolio on desktop</p>
+        </footer>
+    </div>
+
+    <script src="../js/mobile-static.js"></script>
+</body>
+</html>
